@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block title %}Ro'yhatdan o'tish{% endblock title%}
+
+{% block content %}
+
+    <h1>Saytga ro'yhatdan o'tmoqchimisiz?</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit" class="btn btn-outline-danger">SIGN UP</button>
+    </form>
+{% endblock content %}
